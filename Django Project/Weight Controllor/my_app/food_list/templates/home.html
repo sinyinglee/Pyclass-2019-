@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block title%} Weight Control Site{% endblock %}
+
+{%block content%}
+
+     {% if all_items %}
+     <table class="table table-hover">
+	    {% for things in all_items %}
+		    <tr class=" table-info">
+		    	<td>{{forloop.counter}}</td>
+		    	<td>{{things.item}} </td>
+		    	<td><center>{{things.calories}}</center></td>
+		    	<td><center>{{things.datetime}}</center></td>
+		    </tr>
+	    {% endfor %}
+	</table> 
+	{% endif %}
+{% endblock %}
+
+
+
